@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|c:\\users\\user\\desktop\\fuck shit\\engineer\\engineer\\maintenancework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\maintenancework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\annual_inspection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\annual_inspection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\annual_inspection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\annual_inspection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|c:\\users\\user\\desktop\\fuck shit\\engineer\\engineer\\cert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\cert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\cert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12963171-D27D-4E82-8FA6-0E59033D0E19}|engineer\\engineer.csproj|solutionrelative:engineer\\cert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "cert.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\cert.cs",
+              "RelativeDocumentMoniker": "engineer\\cert.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\cert.cs [Design]",
+              "RelativeToolTip": "engineer\\cert.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:30:23.525Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "cert.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\cert.cs",
+              "RelativeDocumentMoniker": "engineer\\cert.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\cert.cs",
+              "RelativeToolTip": "engineer\\cert.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA4wC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:34:35.377Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "maintenancework.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\maintenancework.cs",
+              "RelativeDocumentMoniker": "engineer\\maintenancework.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\maintenancework.cs [Design]",
+              "RelativeToolTip": "engineer\\maintenancework.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T06:18:45.989Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "annual_inspection.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\annual_inspection.cs",
+              "RelativeDocumentMoniker": "engineer\\annual_inspection.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\annual_inspection.cs",
+              "RelativeToolTip": "engineer\\annual_inspection.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAwwGQAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T05:26:36.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "annual_inspection.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\annual_inspection.cs",
+              "RelativeDocumentMoniker": "engineer\\annual_inspection.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\annual_inspection.cs [Design]",
+              "RelativeToolTip": "engineer\\annual_inspection.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T05:22:31.524Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\Form1.cs",
+              "RelativeDocumentMoniker": "engineer\\Form1.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\Form1.cs",
+              "RelativeToolTip": "engineer\\Form1.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:49:33.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\Form1.cs",
+              "RelativeDocumentMoniker": "engineer\\Form1.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\fuck shit\\engineer\\engineer\\Form1.cs [Design]",
+              "RelativeToolTip": "engineer\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T07:28:27.459Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

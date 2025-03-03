@@ -13,14 +13,15 @@ using Org.BouncyCastle.Asn1.X509;
 using System.Xml.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 using Word = Microsoft.Office.Interop.Word;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace engineer
 {
-    public partial class maintenancework: UserControl
+    public partial class permit_application: UserControl
     {
         private readonly string connectionString = "server=localhost;user id=root;password=;database=engineer";
-        public maintenancework()
+        public permit_application()
+
         {
             InitializeComponent();
             LoadData();
@@ -32,7 +33,7 @@ namespace engineer
             {
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM maintenance_work";
+                    string query = "SELECT * FROM building_permit";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     System.Data.DataTable dt = new System.Data.DataTable();
                     adapter.Fill(dt);
@@ -54,27 +55,23 @@ namespace engineer
             }
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(request_by.Text) || string.IsNullOrWhiteSpace(office.Text) ||
-                string.IsNullOrWhiteSpace(work.Text) || string.IsNullOrWhiteSpace(remark.Text))
+            if (string.IsNullOrWhiteSpace(name.Text) || string.IsNullOrWhiteSpace(type_of_application.Text) || string.IsNullOrWhiteSpace(status_of_application.Text))
             {
                 MessageBox.Show("Please fill all fields before saving.");
                 return;
             }
 
-            string query = "INSERT INTO maintenance_work (request_by, office, work, date_request, remark, date_complete) VALUES (@request_by, @office, @work, @date_request, @remark, @date_complete)";
+            string query = "INSERT INTO building_permit (name, date, type_of_application, status_of_application) VALUES (@name, @date, @type_of_application, @status_of_application)";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlCommand cmd = new MySqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@request_by", request_by.Text);
-                cmd.Parameters.AddWithValue("@office", office.Text);
-                cmd.Parameters.AddWithValue("@work", work.Text);
-                cmd.Parameters.AddWithValue("@date_request", date_request.Value);
-                cmd.Parameters.AddWithValue("@remark", remark.Text);
-                cmd.Parameters.AddWithValue("@date_complete", date_complete.Value);
+                cmd.Parameters.AddWithValue("@name", name.Text);
+                cmd.Parameters.AddWithValue("@type_of_application", type_of_application.Text);
+                cmd.Parameters.AddWithValue("@status_of_application", status_of_application.Text);
+                cmd.Parameters.AddWithValue("@date", date.Value);
                 try
                 {
                     conn.Open();
@@ -91,6 +88,13 @@ namespace engineer
             }
         }
 
+        private void ClearFields()
+        {
+            name.Clear();
+            status_of_application.Clear();
+            date.Value = DateTime.Today;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
@@ -100,17 +104,15 @@ namespace engineer
             }
 
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
-            string query = "UPDATE maintenance_work SET request_by=@request_by, office=@office, work=@barangay, date_request=@date_request, remark=@remark, date_complete=@date_complete WHERE id=@id";
+            string query = "UPDATE building_permit SET name=@name, date=@date, type_of_application=@type_of_application, status_of_application=@status_of_application WHERE id=@id";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlCommand cmd = new MySqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@request_by", request_by.Text);
-                cmd.Parameters.AddWithValue("@office", office.Text);
-                cmd.Parameters.AddWithValue("@work", work.Text);
-                cmd.Parameters.AddWithValue("@date_request", date_request.Value);
-                cmd.Parameters.AddWithValue("@remark", remark.Text);
-                cmd.Parameters.AddWithValue("@date_complete", date_complete.Value);
+                cmd.Parameters.AddWithValue("@name", name.Text);
+                cmd.Parameters.AddWithValue("@type_of_application", type_of_application.Text);
+                cmd.Parameters.AddWithValue("@status_of_application", status_of_application.Text);
+                cmd.Parameters.AddWithValue("@date", date.Value);
                 cmd.Parameters.AddWithValue("@id", id);
 
                 try
@@ -128,16 +130,6 @@ namespace engineer
             }
         }
 
-        private void ClearFields()
-        {
-            request_by.Clear();
-            office.Clear();
-            work.Clear();
-            remark.Clear();
-            date_request.Value = DateTime.Today;
-            date_complete.Value = DateTime.Today;
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
@@ -151,7 +143,7 @@ namespace engineer
 
             if (result == DialogResult.Yes)
             {
-                string query = "DELETE FROM maintenance_work WHERE id=@id";
+                string query = "DELETE FROM building_permit WHERE id=@id";
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -169,27 +161,6 @@ namespace engineer
                     {
                         MessageBox.Show("Error: " + ex.Message);
                     }
-                }
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string query = "SELECT * FROM maintenance_work WHERE request_by LIKE @search";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            using (MySqlDataAdapter da = new MySqlDataAdapter(query, conn))
-            {
-                try
-                {
-                    da.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox1.Text + "%");
-                    System.Data.DataTable dt = new System.Data.DataTable();
-                    da.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }
@@ -253,24 +224,30 @@ namespace engineer
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
+            string query = "SELECT * FROM building_permit WHERE name LIKE @search";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlDataAdapter da = new MySqlDataAdapter(query, conn))
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                request_by.Text = row.Cells["request_by"].Value.ToString();
-                office.Text = row.Cells["office"].Value.ToString();
-                work.Text = row.Cells["work"].Value.ToString();
-                remark.Text = row.Cells["remark"].Value.ToString();
-                date_request.Value = Convert.ToDateTime(row.Cells["date_request"].Value);
-                date_complete.Value = Convert.ToDateTime(row.Cells["date_complete"].Value);
+                try
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@search", "%" + textBox1.Text + "%");
+                    System.Data.DataTable dt = new System.Data.DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        
         }
     }
 }

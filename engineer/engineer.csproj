@@ -122,7 +122,19 @@
     <Compile Include="maintenancework.Designer.cs">
       <DependentUpon>maintenancework.cs</DependentUpon>
     </Compile>
+    <Compile Include="permit_application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="permit_application.Designer.cs">
+      <DependentUpon>permit_application.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="programs_works.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="programs_works.Designer.cs">
+      <DependentUpon>programs_works.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="cert.resx">
       <DependentUpon>cert.cs</DependentUpon>
@@ -135,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="maintenancework.resx">
       <DependentUpon>maintenancework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="permit_application.resx">
+      <DependentUpon>permit_application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="programs_works.resx">
+      <DependentUpon>programs_works.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

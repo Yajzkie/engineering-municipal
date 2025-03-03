@@ -247,7 +247,7 @@ namespace engineer
             {
                 DataGridViewRow row = dataGridView1.CurrentRow;
                 Word.Application wordApp = new Word.Application();
-                Word.Document doc = wordApp.Documents.Open(@"C:\\Users\\user\\Documents\\templateannualinspection.docx");
+                Word.Document doc = wordApp.Documents.Open(@"C:\\Users\\user\\Documents\\1.docx");
 
                 ReplaceWordText("{NAME}", row.Cells["name"].Value?.ToString(), doc);
                 ReplaceWordText("{STRUCTURE}", row.Cells["structure"].Value?.ToString(), doc);

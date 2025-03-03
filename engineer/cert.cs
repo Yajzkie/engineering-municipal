@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
 using Word = Microsoft.Office.Interop.Word;
 using System.Drawing.Printing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace engineer
 {
@@ -66,6 +67,7 @@ namespace engineer
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Successfully saved");
                         LoadData();
+                        ClearFields();
                     }
                     catch (Exception ex)
                     {
@@ -89,7 +91,7 @@ namespace engineer
                         cmd.Parameters.AddWithValue("@id", id);
                         cmd.Parameters.AddWithValue("@name", this.name.Text);
                         cmd.Parameters.AddWithValue("@company", this.company.Text);
-                        cmd.Parameters.AddWithValue("@date", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@date", this.date.Value);
                         cmd.Parameters.AddWithValue("@purpose", this.purpose.Text);
 
                         try
@@ -98,6 +100,7 @@ namespace engineer
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Record updated successfully");
                             LoadData();
+                            ClearFields();
                         }
                         catch (Exception ex)
                         {
@@ -299,6 +302,14 @@ namespace engineer
             }
 
             findObject.Execute(Replace: replaceAll);
+        }
+
+        private void ClearFields()
+        {
+            name.Clear();
+            company.Clear();
+            purpose.Clear();
+            date.Value = DateTime.Today;
         }
 
         private void label5_Click(object sender, EventArgs e) { }

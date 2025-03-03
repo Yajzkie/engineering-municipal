@@ -45,3 +45,5 @@ C:\Users\user\Desktop\fuck shit\engineer\engineer\obj\Debug\engineer.pdb
 C:\Users\user\Desktop\fuck shit\engineer\engineer\obj\Debug\engineer.csproj.ResolveComReference.cache
 C:\Users\user\Desktop\fuck shit\engineer\engineer\obj\Debug\engineer.annual_inspection.resources
 C:\Users\user\Desktop\fuck shit\engineer\engineer\obj\Debug\engineer.maintenancework.resources
+C:\Users\user\Desktop\fuck shit\engineer\engineer\obj\Debug\engineer.permit_application.resources
+C:\Users\user\Desktop\fuck shit\engineer\engineer\obj\Debug\engineer.programs_works.resources

@@ -37,6 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.barangay = new System.Windows.Forms.ComboBox();
+            this.amount = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.date_paid = new System.Windows.Forms.DateTimePicker();
             this.or_number = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,9 +56,6 @@
             this.name = new System.Windows.Forms.TextBox();
             this.sdfsd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.amount = new System.Windows.Forms.TextBox();
-            this.barangay = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -162,13 +162,122 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // barangay
+            // 
+            this.barangay.FormattingEnabled = true;
+            this.barangay.IntegralHeight = false;
+            this.barangay.Items.AddRange(new object[] {
+            "Anahao",
+            "",
+            "Banahao",
+            "",
+            "Baugo",
+            "",
+            "Beniton",
+            "",
+            "Buenavista",
+            "",
+            "Bunga",
+            "",
+            "Casao",
+            "",
+            "Catmon",
+            "",
+            "Catoogan",
+            "",
+            "Cawayanan",
+            "",
+            "Dao",
+            "",
+            "Divisoria",
+            "",
+            "Esperanza",
+            "",
+            "Guinsangaan",
+            "",
+            "Hibagwan",
+            "",
+            "Hilaan",
+            "",
+            "Himakilo",
+            "",
+            "Hitawos",
+            "",
+            "Lanao",
+            "",
+            "Lawgawan",
+            "",
+            "Mahayahay",
+            "",
+            "Malbago",
+            "",
+            "Mauylab",
+            "",
+            "Olisihan",
+            "",
+            "Paku",
+            "",
+            "Pamahawan",
+            "",
+            "Pamigsian",
+            "",
+            "Pangi",
+            "",
+            "Poblacion",
+            "",
+            "Pong-on",
+            "",
+            "Sampongon",
+            "",
+            "San Ramon",
+            "",
+            "San Vicente",
+            "",
+            "Santa Cruz",
+            "",
+            "Santo Niño",
+            "",
+            "Taa",
+            "",
+            "Talisay",
+            "",
+            "Taytagan",
+            "",
+            "Tuburan",
+            "",
+            "Union"});
+            this.barangay.Location = new System.Drawing.Point(178, 194);
+            this.barangay.Name = "barangay";
+            this.barangay.Size = new System.Drawing.Size(234, 33);
+            this.barangay.TabIndex = 21;
+            this.barangay.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // amount
+            // 
+            this.amount.Location = new System.Drawing.Point(605, 194);
+            this.amount.Name = "amount";
+            this.amount.Size = new System.Drawing.Size(173, 31);
+            this.amount.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(497, 197);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 25);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Amount";
+            // 
             // date_paid
             // 
+            this.date_paid.CustomFormat = "  ";
             this.date_paid.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.date_paid.Location = new System.Drawing.Point(605, 140);
             this.date_paid.Name = "date_paid";
+            this.date_paid.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.date_paid.Size = new System.Drawing.Size(154, 31);
             this.date_paid.TabIndex = 18;
+            this.date_paid.Value = new System.DateTime(2025, 2, 27, 15, 17, 39, 0);
             // 
             // or_number
             // 
@@ -314,113 +423,6 @@
             this.label2.Size = new System.Drawing.Size(99, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Structure";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(497, 197);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 25);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Amount";
-            // 
-            // amount
-            // 
-            this.amount.Location = new System.Drawing.Point(605, 194);
-            this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(173, 31);
-            this.amount.TabIndex = 20;
-            // 
-            // barangay
-            // 
-            this.barangay.DropDownHeight = 160;
-            this.barangay.FormattingEnabled = true;
-            this.barangay.IntegralHeight = false;
-            this.barangay.Items.AddRange(new object[] {
-            "Anahao",
-            "",
-            "Banahao",
-            "",
-            "Baugo",
-            "",
-            "Beniton",
-            "",
-            "Buenavista",
-            "",
-            "Bunga",
-            "",
-            "Casao",
-            "",
-            "Catmon",
-            "",
-            "Catoogan",
-            "",
-            "Cawayanan",
-            "",
-            "Dao",
-            "",
-            "Divisoria",
-            "",
-            "Esperanza",
-            "",
-            "Guinsangaan",
-            "",
-            "Hibagwan",
-            "",
-            "Hilaan",
-            "",
-            "Himakilo",
-            "",
-            "Hitawos",
-            "",
-            "Lanao",
-            "",
-            "Lawgawan",
-            "",
-            "Mahayahay",
-            "",
-            "Malbago",
-            "",
-            "Mauylab",
-            "",
-            "Olisihan",
-            "",
-            "Paku",
-            "",
-            "Pamahawan",
-            "",
-            "Pamigsian",
-            "",
-            "Pangi",
-            "",
-            "Poblacion",
-            "",
-            "Pong-on",
-            "",
-            "Sampongon",
-            "",
-            "San Ramon",
-            "",
-            "San Vicente",
-            "",
-            "Santa Cruz",
-            "",
-            "Santo Niño",
-            "",
-            "Taa",
-            "",
-            "Talisay",
-            "",
-            "Taytagan",
-            "",
-            "Tuburan",
-            "",
-            "Union"});
-            this.barangay.Location = new System.Drawing.Point(178, 194);
-            this.barangay.Name = "barangay";
-            this.barangay.Size = new System.Drawing.Size(234, 33);
-            this.barangay.TabIndex = 21;
-            this.barangay.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // annual_inspection
             // 

@@ -157,7 +157,7 @@ namespace engineer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM annual_inspection WHERE name LIKE @search";
+            string query = "SELECT * FROM annual_inspection WHERE name LIKE @search OR structure LIKE @search OR barangay LIKE @search OR or_number LIKE @search";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlDataAdapter da = new MySqlDataAdapter(query, conn))
@@ -352,6 +352,16 @@ namespace engineer
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void amount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

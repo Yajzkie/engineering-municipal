@@ -166,7 +166,7 @@ namespace engineer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM certificate WHERE name LIKE @search";
+            string query = "SELECT * FROM certificate WHERE name LIKE @search OR company LIKE @search OR purpose LIKE @search";
             using (MySqlConnection con = new MySqlConnection(connection))
             {
                 try

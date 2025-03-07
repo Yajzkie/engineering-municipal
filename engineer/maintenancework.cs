@@ -100,7 +100,7 @@ namespace engineer
             }
 
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
-            string query = "UPDATE maintenance_work SET request_by=@request_by, office=@office, work=@barangay, date_request=@date_request, remark=@remark, date_complete=@date_complete WHERE id=@id";
+            string query = "UPDATE maintenance_work SET request_by=@request_by, office=@office, work=@work, date_request=@date_request, remark=@remark, date_complete=@date_complete WHERE id=@id";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -175,7 +175,7 @@ namespace engineer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM maintenance_work WHERE request_by LIKE @search";
+            string query = "SELECT * FROM maintenance_work WHERE request_by LIKE @search OR office LIKE @search OR work LIKE @search OR remark LIKE @search";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlDataAdapter da = new MySqlDataAdapter(query, conn))
@@ -271,6 +271,11 @@ namespace engineer
         {
 
         
+        }
+
+        private void work_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

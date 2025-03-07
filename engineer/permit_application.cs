@@ -156,6 +156,7 @@ namespace engineer
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Record deleted successfully.");
                         LoadData();
+                        ClearFields();
                     }
                     catch (Exception ex)
                     {
@@ -226,7 +227,7 @@ namespace engineer
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM building_permit WHERE name LIKE @search";
+            string query = "SELECT * FROM building_permit WHERE name LIKE @search OR type_of_application LIKE @search OR status_of_application LIKE @search";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             using (MySqlDataAdapter da = new MySqlDataAdapter(query, conn))
@@ -246,6 +247,23 @@ namespace engineer
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                name.Text = row.Cells["name"].Value.ToString();
+                type_of_application.Text = row.Cells["type_of_application"].Value.ToString();
+                status_of_application.Text = row.Cells["status_of_application"].Value.ToString();
+                date.Value = Convert.ToDateTime(row.Cells["date"].Value);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
